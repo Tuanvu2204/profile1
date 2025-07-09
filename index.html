@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card & Slider</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      background: linear-gradient(to right, #e66465, #9198e5);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .profile-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 320px;
+    }
+
+    .image {
+      margin-bottom: 15px;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .data h2 {
+      margin: 10px 0 5px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+
+    .info {
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .btn {
+      background: #ff66aa;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff4f99;
+    }
+
+    .slider {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    .card-item {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      overflow: hidden;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .card-button {
+      background: #7873f5;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card-button:hover {
+      background: #5c59d4;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .badge-gamer { background: #6ecfff; }
+    .badge-editor { background: #ff6ec4; }
+    .badge-designer { background: #ffb86c; }
+    .badge-marketer { background: #32d296; }
+    .badge-developer { background: #f1c40f; color: #000; }
+  </style>
+</head>
+<body>
+  <!-- Profile Section -->
+  <section class="main">
+    <div class="profile-card">
+      <div class="image">
+        <img src="tuanvu.jpg" alt="Tuấn Vũ" class="profile-pic">
+      </div>
+      <div class="data">
+        <h2>Tuấn Vũ</h2>
+        <span>Fullstack Developer & Designer</span>
+      </div>
+      <div class="row">
+        <div class="info">
+          <h3>Following</h3>
+          <span>50k</span>
+        </div>
+        <div class="info">
+          <h3>Followers</h3>
+          <span>250N</span>
+        </div>
+        <div class="info">
+          <h3>Posts</h3>
+          <span>250M</span>
+        </div>
+      </div>
+      <div class="buttons">
+        <a href="https://m.me/Vu.Nguyen.22042005" class="btn" target="_blank">Message</a>
+        <a href="https://www.facebook.com/share/16cfP29TJs/" class="btn" target="_blank">Follow Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider Section -->
+  <section class="slider">
+    <div class="card-wrapper swiper">
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="images/gamer.jpg" class="card-image">
+            <span class="badge badge-gamer">Gamer</span>
+            <h3 class="card-title">Giải trí với thế giới ảo</h3>
+            <p>Khám phá thế giới game hấp dẫn, nơi bạn thể hiện kỹ năng và chiến thuật đỉnh cao.</p>
+            <button class="card-button">→</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="images/editor.jpg" class="card-image">
+            <span class="badge badge-editor">Editor</span>
+            <h3 class="card-title">Chỉnh sửa nội dung chuyên nghiệp</h3>
+            <p>Tạo ra sản phẩm video, ảnh, âm thanh chất lượng cao, nâng tầm trải nghiệm người dùng.</p>
+            <button class="card-button">→</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="images/designer.jpg" class="card-image">
+            <span class="badge badge-designer">Designer</span>
+            <h3 class="card-title">Thiết kế sáng tạo và hiệu quả</h3>
+            <p>Biến ý tưởng thành giao diện bắt mắt và thân thiện, tăng tính chuyên nghiệp cho thương hiệu.</p>
+            <button class="card-button">→</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="images/marketer.jpg" class="card-image">
+            <span class="badge badge-marketer">Marketer</span>
+            <h3 class="card-title">Tiếp thị linh hoạt & đột phá</h3>
+            <p>Xây dựng chiến lược truyền thông hiệu quả, giúp sản phẩm tiếp cận đúng đối tượng khách hàng.</p>
+            <button class="card-button">→</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="images/developer.jpg" class="card-image">
+            <span class="badge badge-developer">Developer</span>
+            <h3 class="card-title">Xây dựng sản phẩm chất lượng</h3>
+            <p>Phát triển phần mềm từ front-end đến back-end, tối ưu hiệu suất và trải nghiệm người dùng.</p>
+            <button class="card-button">→</button>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
